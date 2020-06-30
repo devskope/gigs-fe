@@ -64,13 +64,13 @@ const Sidebar = (props) => {
             <Icon>
               <img
                 alt='gigs icon'
-                src={pathname === '/gigs' ? gigsIconActive : gigsIcon}
+                src={pathname.includes('/gigs') ? gigsIconActive : gigsIcon}
               />
             </Icon>
           </ListItemIcon>
           <ListItemText
             style={{
-              color: pathname === '/gigs' && theme.palette.primary.main,
+              color: pathname.includes('/gigs') && theme.palette.primary.main,
             }}
           >
             Gigs
